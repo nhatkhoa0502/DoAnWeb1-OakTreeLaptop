@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href=" https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./core/font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="shortcut icon" href="./core/img/ShortCut_Icon.png">
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="./core/css/Base.css"> <!-- CSS Base -->
+    <link rel="stylesheet" href="./core/css/Grid.css"> <!-- Grid System -->
+    <link rel="stylesheet" href="./core/css/Header.css">
+    <link rel="stylesheet" href="./core/css/Introduce.css">
+    <link rel="stylesheet" href="./core/css/Product.css">
+    <link rel="stylesheet" href="./core/css/Cart.css">
+    <link rel="stylesheet" href="./core/css/Responsive.css">
+    <link rel="stylesheet" href="./core/css/LoginRegister.css">
+    <link rel="stylesheet" href="./core/css/Footer.css">
+    <link rel="stylesheet" href="./core/css/Toast.css">
+    <link rel="stylesheet" href="./core/css/DetailProduct.css">
+    <script src="./core/scripts/LocalStorage.js"></script> <!-- Tạo LocalStorage cho Web -->
+    <title>OakTree</title>
+</head>
+
+<body>
+    <div class="main_body">
+        <!-- toast message  -->
+        <div id="toast"></div>
+
+        <!-- Phần Header -->
+        <div class="header js-OpenHeaderForMobile">
+            <div class="grid wide">
+                <div class="header-content">
+                    <div class="header-logo">
+                        <a href="#" class="header-logo--link">Oak</a>
+                    </div>
+                    <div class="header-navbar--list">
+                        <div class="header-navbar--item js-TabHeader headerActive">Trang chủ</div>
+                        <div class="header-navbar--item js-TabHeader">Sản phẩm</div>
+                        <div class="header-navbar--item js-TabHeader">Giỏ hàng</div>
+                        <div class="header-navbar--item js-HandlerLR is-relatived">
+                            <i class="header-user--icon far fa-user"></i>
+                            Tài khoản
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="header-mobile--btn js-mobile-bars">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần Container -->
+        <div class="container">
+            <!-- phần giới thiệu sản phẩm (Trang chủ)  -->
+            <div class="container-Introduce js-Container headerActive">
+                <div class="Introduce-slider">
+                </div>
+                <div class="introduce-content">
+                    <h2 class="introduce-title1">OakTree chuyên về những dòng laptop hiện đại</h2>
+                    <h5 class="introduce-title2 ">Đáng tin - Giá cả hợp lý - Nhiều ưu đãi</h5>
+                </div>
+                <div class="product-introduces">
+                    <div class="grid wide">
+                        <div class="product-introduces--title">
+                            Các Mặt Hàng
+                        </div>
+
+                        <div class="product-introduce">
+                            <img class="product-introduce-image" src="./core/img/introduce/LapGaming.jpg" />
+                            <div class="product-introduce-content">
+                                <p class="product-introduce--content-title">Laptop Gaming</p>
+                                <p class="product-introduce--content-contents">
+                                    <strong>Laptop gaming</strong>  (laptop chuyên chơi game) là loại máy tính 
+                                    xách tay được thiết kế chuyên phục vụ cho cấu hình chơi game 
+                                     và các trò chơi trên máy tính cần xử lý mạnh về đồ họa mà 
+                                    các game thủ đang cần.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="product-introduce">
+                            <div class="product-introduce-content">
+                                <p class="product-introduce--content-title">Laptop Văn Phòng</p>
+                                <p class="product-introduce--content-contents">
+                                    <strong>Laptop văn phòng</strong> là dòng máy tính có cấu hình bình 
+                                    thường và tương đối thông dụng ở giới trẻ. Máy tính văn phòng có cấu
+                                     hình không quá cao, chi phí rẻ đồng thời có khả năng xử lý công 
+                                     việc nhanh chóng và tiện lợi.
+                                </p>
+                            </div>
+                            <img class="product-introduce-image" src="./core/img/introduce/LapVanPhong.jpg" />
+                        </div>
+
+
+                        <div class="product-introduce">
+                            <img class="product-introduce-image" src="./core/img/introduce/Macbook.jpg" />
+                            <div class="product-introduce-content">
+                                <p class="product-introduce--content-title">Macbook</p>
+                                <p class="product-introduce--content-contents">
+                                    <strong>MacBook</strong> là dòng máy tính xách tay (laptop) của 
+                                    Apple Inc sản xuất và phát triển. MacBook có đặc trưng là thiết 
+                                    kế sang trọng cùng trải nghiệm mượt mà mà nó đem lại nhờ chạy hệ 
+                                    điều hành macOS – hệ điều hành do chính Apple phát triển.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="product-introduce">
+                            <div class="product-introduce-content">
+                                <p class="product-introduce--content-title">Laptop Workstation</p>
+                                <p class="product-introduce--content-contents">
+                                    <strong>Laptop Workstation</strong> hay còn gọi là máy tính trạm, 
+                                    được thiết kế chuyên biệt để phục vụ cho những công việc thiên 
+                                    về ứng dụng khoa học kỹ thuật và đồ họa chuyên nghiệp.
+                                </p>
+                            </div>
+                            <img class="product-introduce-image" src="./core/img/introduce/LapWorkstation.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- phần bán sản phẩm (Sản Phẩm)  -->
+            <div class="container-Product js-Container">
+                <div class="grid wide">
+                    <div class="row sm-gutter">
+                        <div class="col l-2 m-0 c-0">
+                            <div class="category">
+                                <h3 class="category-header">Tìm kiếm</h3>
+                                <form class="category-search" method="get" onsubmit="return false">
+                                    <input type="text" class="category-search--input" placeholder="Tìm kiếm">
+                                    <button id="search-btn" type="button" class="category-search--btn" maxlength="40">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="category">
+                                <h3 class="category-header">Danh Mục</h3>
+                                <ul class="category-list"></ul>
+                            </div>
+                        </div>
+
+                        <div class="col l-10 m-12 c-12">
+                            <!-- search mobile -->
+                            <form class="mobile-search" method="get" onsubmit="return false">
+                                <input type="text" class="mobile-search--input" placeholder="Tìm kiếm">
+                                <button id="search-btn--mobile" type="button" class="mobile-search--btn" maxlength="40">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+
+                            <!-- category mobile -->
+                            <div class="mobile-category">
+                                <ul class="mobile-category-list"></ul>
+                            </div>
+
+                            <!-- show Product -->
+                            <div id="show-Product" class="main-product">
+                                <div id="js-product-list" class="row sm-gutter"></div>
+                                <ul id="page-num" class="pagination home-product__pagination"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Phần giỏ hàng (Giỏ hàng)  -->
+            <div class="container-Cart js-Container">
+                <div class="grid wide">
+                    <div class="row sm-gutter">
+                        <div class="cart">
+                            <!-- Khi không có sản phẩm hoặc chưa add sản phẩm -->
+                            <img class="no-cart" src="./core/img/empty-cart.png" alt="">
+                            <!-- Sau khi đăng nhập và mua hàng thì tự động Inner đè lên Form  -->
+                        </div>
+                        <div class="cartPayment"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Phần Footer -->
+        <div class="footer">
+            <div class="grid wide">
+                <div class="row sm-gutter">
+                    <div class="col l-6 m-8 c-12">
+                        <h3 class="footer__heading">OakTree</h3>
+                        <p class="footer__content">OakTree là đơn vị cung cấp các mẫu laptop với giá cả vô cùng hợp lý, phù hợp với nhiều đối tượng khách hàng.</p>
+                    </div>
+                    <div class="col l-2 m-6 c-6">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link">Giới thiệu</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link">Điều khoản</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link">Tuyển dụng</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2 m-4 c-6">
+                        <h3 class="footer__heading">Trợ giúp</h3>
+                        <ul class="footer-list">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link">Chăm Sóc Khách Hàng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link">Hướng dẫn mua hàng </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col l-2 m-6 c-12">
+                        <h3 class="footer__heading">Theo dõi</h3>
+                        <ul class="footer-list-icon">
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link"><i class="footer-item_icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="#" class="footer-item_link"><i class="footer-item_icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__text">© 2022 - Made by OakTree.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form đăng kí - đăng nhập -->
+    <div id="LR-form" class="LR-wrap">
+        <div class="LR-main">
+            <!-- close btn -->
+            <div class="reg-btn__close js-close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <!-- header-select Login or Register  -->
+            <div class="LR-header">
+                <div class="LR-header--item isActive isHoverBG">Đăng nhập</div>
+                <div class="LR-header--item">Đăng kí</div>
+                <div class="line"></div>
+            </div>
+            <div class="LR-container">
+                <!-- Login  -->
+                <form id="login" class="LR-container--item isActive" method="get">
+                    <div class="LR-body">
+                        <div class="login-group">
+                            <input id="js-LG_account" type="text" class="input-field" placeholder="Tên Đăng Nhập"
+                                maxlength="24" required>
+                            <input id="js-LG_password" type="password" class="input-field" placeholder="Mật khẩu"
+                                maxlength="12" required>
+                            <div class="checkbox-form">
+                                <input type="checkbox" class="check-box"><span>Ghi nhớ mật khẩu</span>
+                            </div>
+                            <button id="js-btn-login" type="button" class="sumbit-btn">Đăng Nhập</button>
+                        </div>
+                    </div>
+                    <div class="LR-footer">
+                        <div class="border-div">
+                            <div class="border-line"></div>
+                            <div class="border-name">Hoặc</div>
+                            <div class="border-line"></div>
+                        </div>
+
+                        <ul class="supLogin-list">
+                            <li class="supLogin--item">
+                                <a class="supLogin--item-link" href="">
+                                    <i class="supLogin--icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="supLogin--item">
+                                <a class="supLogin--item-link" href="">
+                                    <i class="supLogin--icon fab fa-google"></i>
+                                    Google
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+                <!-- Register -->
+                <form id="register" class="LR-container--item" method="get">
+                    <div class="LR-body">
+                        <div class="login-group">
+                            <input id="js-RG_gmail" type="email" class="input-field" placeholder="Nhập vào gmail"
+                                required>
+                            <input id="js-RG_account" type="text" class="input-field" placeholder="Tên đăng nhập"
+                                maxlength="24" required>
+                            <input id="js-RG_password" type="password" class="input-field" placeholder="Nhập mật khẩu"
+                                maxlength="12" required>
+                            <input id="js-RG_RePassword" type="password" class="input-field"
+                                placeholder="Nhập lại mật khẩu" maxlength="12" required>
+                            <div class="checkbox-form">
+                                <input id="js-RG_radio" type="checkbox" class="check-box"><span>Tôi đã đồng ý với
+                                    <a href="#">điều khoản</a> và <a href="#">dịch vụ</a>.</span>
+                            </div>
+                            <button id="js-btn-register" type="button" class="sumbit-btn">Đăng Kí</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- form chi tiết sản phẩm  -->
+    <div class="DetailProduct_Wrap">
+        <div class="Detail_Product_main">
+            <div class="Detail_Product_header">Thông tin sản phẩm</div>
+            <div class="deltail-btn__close js-D-close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="Detail_Product_main_form"></div>
+        </div>
+    </div>
+
+
+    <script src="./core/scripts/EventHandler.js"></script>
+    <script src="./core/scripts/Products.js"></script>
+    <script src="./core/scripts/Cart.js"></script>
+    <script src="./core/scripts/LoginRegister.js"></script>
+</body>
+
+</html>
