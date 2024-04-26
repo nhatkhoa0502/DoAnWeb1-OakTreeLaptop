@@ -19,7 +19,7 @@ var types = [
 // đẩy mảng thể loại lên Local Storage
 function PushTypetoLocalStorage() {
     // nếu trong local Storage ko có types thì khởi tạo 
-    // if (localStorage.getItem('types') == null) 
+    if (localStorage.getItem('types') == null) 
     {
         localStorage.setItem('types', JSON.stringify(types)); // đẩy dữ liệu lên Local Storage
     }

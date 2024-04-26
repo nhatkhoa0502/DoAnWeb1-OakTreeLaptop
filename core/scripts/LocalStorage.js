@@ -2,7 +2,7 @@
 // khởi tạo user
 function createAccount() {
     var userArray = [];
-    // if (localStorage.getItem('user') == null)
+    if (localStorage.getItem('user') == null)
     {
         var admin = {
             username: 'admin',
@@ -38,7 +38,7 @@ function createAccount() {
 // --------------------------------------------------------------------------- //
 //  khởi tạo dữ liệu sản phẩm
 function createProducts() {
-    // if (localStorage.getItem('product') === null)
+    if (localStorage.getItem('product') === null)
     {     
         var productArray = [
             { id: 0, type: 'VanPhong', name: 'Acer Swift 1', img: '/img/Products/VanPhong/020.jpg', price: 55000 , description: ""},
@@ -80,7 +80,7 @@ function createProducts() {
 // --------------------------------------------------------------------------- //
 // khởi tạo cartList rỗng
 function createCartListEmpty() {
-    // if (localStorage.getItem('cartList') === null) 
+    if (localStorage.getItem('cartList') === null) 
     {
         var CartEmpty = [];
         localStorage.setItem('cartList', JSON.stringify(CartEmpty));
