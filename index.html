@@ -23,11 +23,58 @@
     <link rel="stylesheet" href="./core/css/Footer.css">
     <link rel="stylesheet" href="./core/css/Toast.css">
     <link rel="stylesheet" href="./core/css/DetailProduct.css">
+
     <script src="./core/scripts/LocalStorage.js"></script> <!-- Tạo LocalStorage cho Web -->
     <title>OakTree</title>
+
+    <style>
+        .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+
+            /* Thiết lập các thuộc tính CSS tương ứng */
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+            /* Màu chữ và nền */
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+
+            padding: 0.75rem 1.5rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .fixed-button:hover {
+            color: #fff;
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
+    <a href="maytinh.html" target="_blank">
+        <button class="btn btn-lg btn-primary fixed-button">Máy tính tuổi thông minh</button>
+    </a>
     <div class="main_body">
         <!-- toast message  -->
         <div id="toast"></div>
@@ -77,9 +124,9 @@
                             <div class="product-introduce-content">
                                 <p class="product-introduce--content-title">Laptop Gaming</p>
                                 <p class="product-introduce--content-contents">
-                                    <strong>Laptop gaming</strong>  (laptop chuyên chơi game) là loại máy tính 
-                                    xách tay được thiết kế chuyên phục vụ cho cấu hình chơi game 
-                                     và các trò chơi trên máy tính cần xử lý mạnh về đồ họa mà 
+                                    <strong>Laptop gaming</strong> (laptop chuyên chơi game) là loại máy tính
+                                    xách tay được thiết kế chuyên phục vụ cho cấu hình chơi game
+                                    và các trò chơi trên máy tính cần xử lý mạnh về đồ họa mà
                                     các game thủ đang cần.
                                 </p>
                             </div>
@@ -89,10 +136,10 @@
                             <div class="product-introduce-content">
                                 <p class="product-introduce--content-title">Laptop Văn Phòng</p>
                                 <p class="product-introduce--content-contents">
-                                    <strong>Laptop văn phòng</strong> là dòng máy tính có cấu hình bình 
+                                    <strong>Laptop văn phòng</strong> là dòng máy tính có cấu hình bình
                                     thường và tương đối thông dụng ở giới trẻ. Máy tính văn phòng có cấu
-                                     hình không quá cao, chi phí rẻ đồng thời có khả năng xử lý công 
-                                     việc nhanh chóng và tiện lợi.
+                                    hình không quá cao, chi phí rẻ đồng thời có khả năng xử lý công
+                                    việc nhanh chóng và tiện lợi.
                                 </p>
                             </div>
                             <img class="product-introduce-image" src="./core/img/introduce/LapVanPhong.jpg" />
@@ -104,9 +151,9 @@
                             <div class="product-introduce-content">
                                 <p class="product-introduce--content-title">Macbook</p>
                                 <p class="product-introduce--content-contents">
-                                    <strong>MacBook</strong> là dòng máy tính xách tay (laptop) của 
-                                    Apple Inc sản xuất và phát triển. MacBook có đặc trưng là thiết 
-                                    kế sang trọng cùng trải nghiệm mượt mà mà nó đem lại nhờ chạy hệ 
+                                    <strong>MacBook</strong> là dòng máy tính xách tay (laptop) của
+                                    Apple Inc sản xuất và phát triển. MacBook có đặc trưng là thiết
+                                    kế sang trọng cùng trải nghiệm mượt mà mà nó đem lại nhờ chạy hệ
                                     điều hành macOS – hệ điều hành do chính Apple phát triển.
                                 </p>
                             </div>
@@ -115,8 +162,8 @@
                             <div class="product-introduce-content">
                                 <p class="product-introduce--content-title">Laptop Workstation</p>
                                 <p class="product-introduce--content-contents">
-                                    <strong>Laptop Workstation</strong> hay còn gọi là máy tính trạm, 
-                                    được thiết kế chuyên biệt để phục vụ cho những công việc thiên 
+                                    <strong>Laptop Workstation</strong> hay còn gọi là máy tính trạm,
+                                    được thiết kế chuyên biệt để phục vụ cho những công việc thiên
                                     về ứng dụng khoa học kỹ thuật và đồ họa chuyên nghiệp.
                                 </p>
                             </div>
@@ -193,7 +240,8 @@
                 <div class="row sm-gutter">
                     <div class="col l-6 m-8 c-12">
                         <h3 class="footer__heading">OakTree</h3>
-                        <p class="footer__content">OakTree là đơn vị cung cấp các mẫu laptop với giá cả vô cùng hợp lý, phù hợp với nhiều đối tượng khách hàng.</p>
+                        <p class="footer__content">OakTree là đơn vị cung cấp các mẫu laptop với giá cả vô cùng hợp lý,
+                            phù hợp với nhiều đối tượng khách hàng.</p>
                     </div>
                     <div class="col l-2 m-6 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
