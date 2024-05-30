@@ -14,8 +14,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="profile.css" />
-
     <!-- intro instruction -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css" rel="stylesheet" />
 
@@ -26,7 +24,7 @@
 
 <body>
 
-    <div class="container p-3 mt-5 ">
+    <div id="container_main" class="container p-3 mt-5" show>
         <div class="row d-flex justify-content-center">
             <div class="col-sm-5 shadow-lg rounded-5 p-3">
                 <h3 class="text-center my-3 text-decoration-underline">Máy tính tuổi thông minh</h3>
@@ -36,7 +34,8 @@
                         class="form-control" placeholder="Nhập tuổi" />
                 </div>
                 <div class="mt-3 d-grid">
-                    <button id="btn_tinhTuoi" data-intro="Sau đó nhấn nút này hoặc nhấn nút enter trên bàn phím để bắt đầu tính tuổi"
+                    <button id="btn_tinhTuoi"
+                        data-intro="Sau đó nhấn nút này hoặc nhấn nút enter trên bàn phím để bắt đầu tính tuổi"
                         class="btn btn-lg btn-outline-primary btn-block">
                         Tính tuổi
                     </button>
@@ -46,17 +45,193 @@
                         Bấm vào đây để xem hướng dẫn sử dụng
                     </button>
                 </div>
+                <div class="mt-2 d-grid">
+                    <button id="btn_troll" data-intro="Đừng nhấn vào nút này!!!" class="btn btn-lg btn-danger">
+                        Đừng nhấn vào đây!!!
+                    </button>
+                </div>
                 <div id="alert">
 
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="container_troll" hidden>
+        <div class="row">
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-sm-2 p-0">
+                <video class="myVideo" style="width: 100%;" loop muted>
+                    <source src="Rick_Roll_10_seconds.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
 
 <script>
+
+    document.getElementById('btn_troll').addEventListener('click', function () {
+        let container_main = document.getElementById('container_main');
+        let container_troll = document.getElementById('container_troll');
+
+        container_main.removeAttribute('show');
+        container_main.setAttribute('hidden', '')
+
+        container_troll.removeAttribute('hidden');
+        container_troll.setAttribute('show', '')
+        
+        document.querySelectorAll('.myVideo').forEach(video => {
+            video.play();
+        });
+    });
 
     $(document).keyup(function (e) {
         if (e.keyCode == 13) {  // enter
@@ -100,7 +275,6 @@
                 }).then((result) => {
                     /* Read more about handling dismissals below */
                     if (result.dismiss === Swal.DismissReason.timer) {
-                        console.log("I was closed by the timer");
                         Swal.fire(`Tuổi của bạn là: ${tuoi}`);
                     }
                 });
