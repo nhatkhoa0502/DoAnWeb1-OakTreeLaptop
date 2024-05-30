@@ -32,11 +32,11 @@
                 <h3 class="text-center my-3 text-decoration-underline">Máy tính tuổi thông minh</h3>
                 <div class="mb-3">
                     <label for="pwd" class="form-label text-danger">Mời bạn nhập tuổi của mình: </label>
-                    <input id="input_tuoi" data-intro="Đầu tiên nhập tuổi của bạn vào đây" type="text" class="form-control"
-                        placeholder="Nhập tuổi" />
+                    <input id="input_tuoi" data-intro="Đầu tiên nhập tuổi của bạn vào đây" type="text"
+                        class="form-control" placeholder="Nhập tuổi" />
                 </div>
                 <div class="mt-3 d-grid">
-                    <button id="btn_tinhTuoi" data-intro="Sau đó nhấn nút này để bắt đầu tính tuổi"
+                    <button id="btn_tinhTuoi" data-intro="Sau đó nhấn nút này hoặc nhấn nút enter trên bàn phím để bắt đầu tính tuổi"
                         class="btn btn-lg btn-outline-primary btn-block">
                         Tính tuổi
                     </button>
@@ -57,6 +57,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
 
 <script>
+
+    $(document).keyup(function (e) {
+        if (e.keyCode == 13) {  // enter
+            $("#btn_tinhTuoi").click();
+        }
+    });
 
     $("#btn_huongDan").click(function () {
         introJs().start();
@@ -82,8 +88,8 @@
                     didOpen: () => {
                         Swal.showLoading();
                         const timer = Swal.getPopup().querySelector("b");
-                        timerInterval = setInterval(() => {                            
-                            let time = ((3000-Swal.getTimerLeft())*100)/3000
+                        timerInterval = setInterval(() => {
+                            let time = ((3000 - Swal.getTimerLeft()) * 100) / 3000
                             timer.textContent = `${~~time}%`;
                         }, 100);
                     },
