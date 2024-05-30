@@ -16,23 +16,34 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="profile.css" />
 
+    <!-- intro instruction -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css" rel="stylesheet" />
 
+    <!-- alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
 <body>
-    
+
     <div class="container p-3 mt-5 ">
         <div class="row d-flex justify-content-center">
             <div class="col-sm-5 shadow-lg rounded-5 p-3">
                 <h3 class="text-center my-3 text-decoration-underline">Máy tính tuổi thông minh</h3>
                 <div class="mb-3">
                     <label for="pwd" class="form-label text-danger">Mời bạn nhập tuổi của mình: </label>
-                    <input id="input_tuoi" type="text" class="form-control" placeholder="Nhập tuổi" />
+                    <input id="input_tuoi" data-intro="Đầu tiên nhập tuổi của bạn vào đây" type="text" class="form-control"
+                        placeholder="Nhập tuổi" />
                 </div>
                 <div class="mt-3 d-grid">
-                    <button id="btn_tinhTuoi" class="btn btn-lg btn-outline-primary btn-block">
+                    <button id="btn_tinhTuoi" data-intro="Sau đó nhấn nút này để bắt đầu tính tuổi"
+                        class="btn btn-lg btn-outline-primary btn-block">
                         Tính tuổi
+                    </button>
+                </div>
+                <div class="mt-2 d-grid">
+                    <button id="btn_huongDan" class="btn btn-lg btn-outline-info btn-block">
+                        Bấm vào đây để xem hướng dẫn sử dụng
                     </button>
                 </div>
                 <div id="alert">
@@ -43,24 +54,71 @@
     </div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
+
 <script>
+
+    $("#btn_huongDan").click(function () {
+        introJs().start();
+    });
+
     $(document).ready(function () {
         $("#btn_tinhTuoi").click(function () {
             let tuoi = $("#input_tuoi").val();
-            if ($.isNumeric(tuoi) && tuoi.trim() !== '') {
-                let str = `
-                    <div class="alert alert-success mt-3">
-                        <strong>Tuổi</strong> của bạn là: <strong>${tuoi}</strong>
-                    </div>
-                    `;
-                $("#alert").html(str);
+            if (tuoi.trim() == '') {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Bạn chưa nhập tuổi!!!",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
+            } else if ($.isNumeric(tuoi)) {
+                let timerInterval;
+                Swal.fire({
+                    title: "Thông báo!",
+                    html: "Đang tính tuổi!!! <b></b>",
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading();
+                        const timer = Swal.getPopup().querySelector("b");
+                        timerInterval = setInterval(() => {                            
+                            let time = ((3000-Swal.getTimerLeft())*100)/3000
+                            timer.textContent = `${~~time}%`;
+                        }, 100);
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval);
+                    }
+
+                }).then((result) => {
+                    /* Read more about handling dismissals below */
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        console.log("I was closed by the timer");
+                        Swal.fire(`Tuổi của bạn là: ${tuoi}`);
+                    }
+                });
+
+                // let str = `
+                //     <div class="alert alert-success mt-3">
+                //         <strong>Tuổi</strong> của bạn là: <strong>${tuoi}</strong>
+                //     </div>
+                //     `;
+                // $("#alert").html(str);
             } else {
-                let str = `
-                    <div class="alert alert-danger mt-3">
-                        <strong>Tuổi</strong> bạn nhập không hợp lệ!!!
-                    </div>
-                    `;
-                $("#alert").html(str);
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Tuổi bạn nhập vào không hợp lệ!!!",
+                    // footer: '<a href="#">Why do I have this issue?</a>'
+                });
+
+                // let str = `
+                //     <div class="alert alert-danger mt-3">
+                //         <strong>Tuổi</strong> bạn nhập không hợp lệ!!!
+                //     </div>
+                //     `;
+                // $("#alert").html(str);
             }
         });
     });
